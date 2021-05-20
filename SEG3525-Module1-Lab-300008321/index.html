@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+	    <link href="styles/style.css" rel="stylesheet" type="text/css">
+        <title>Questionnaire</title>
+    </head>
+
+    <body>
+        <h1>Questionnaire Interface Facebook de Vergenie</h1>
+        <form action="index.php" name="Vergenie Facebook Form"></form>
+        <br>
+        <h2>Voici une page web qui sert à savoir l'opinion des utilisateurs sur l'interface initiale de Facebook.</h2>
+        <h2>Prenez le temps de visiter la page web de <a href="https://www.facebook.com/">Facebook</a>.</h2>
+        <br>
+        <br>
+        <a href="https://www.facebook.com/"><img src="images/PagePrincipaleFacebook.PNG" alt="https://www.facebook.com/" width="920" height="470"></a>
+        <br>
+        <br>
+        <div class="question">
+            <h2>Renseignements Personnels</h2>
+            <p>Prénom: <input type="text" name="firstname"></p>
+            <p>Nom de Famille: <input type="text" name="lastname"></p>
+            <br>
+            <h2>Questions</h2>
+            <h3>Quel but est-ce que l'interface usager de Facebook accomplit-il le mieux?</h3>
+            <select id="but">
+                <option value="Fonctionnement Correct" selected="selected">Fonctionnement Correct</option>
+                <option value="Cohérence">Cohérence</option>
+                <option value="Efficacité">Efficacité</option>
+                <option value="Utilisabilité">Utilisabilité</option>
+                <option value="Fiabilité">Fiabilité</option>
+                <option value="Securité et Intégrité des données">Sécurité et Intégrité des données</option>
+            </select>
+            <br>
+            <br>
+            <h3>Vous utilisez Facebook sur quel appareil électronique?</h3>
+            <h4>Vous pouvez sélectionner plus qu'un choix en pesant la touche ctrl</h4>
+            <select size="5" multiple>
+               <option value="Tablette">Business</option>
+               <option value="Smart Phone">Smart Phone</option>
+               <option value="Laptop">Laptop</option>
+               <option value="PC">PC</option>
+               <option value="Autre">Autre</option>
+          </select>
+          <br>
+          <br>
+          <h3>Sur une échelle de 1-10 (1 étant le pire et 10 étant le meiller), notez l'interface d'usager de Facebook.</h3>
+          <select id="notez">
+            <option value="1" selected="selected">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+        <br>
+        <br>
+        <h3>Est-ce que les couleurs de l'interface sont plaisants aux yeux.</h3>
+        <input type="radio" name="Couleur" value="Oui">Oui<br>
+		<input type="radio" name="Couleur" value="Non">Non<br>
+        <br>
+        <h3>Quel(s) types d'évaluation utiliserez-vous pour tester l'interface d'usager de Faceook.</h3>
+        <input type="checkbox" name="Eval" value="Rapport de problèmes">Rapport de problèmes<br>
+		<input type="checkbox" name="Eval" value="Analyse de logs">Analyse de logs<br>
+        <input type="checkbox" name="Eval" value="Expériences scientifiques">Expériences scientifiques<br>
+        <input type="checkbox" name="Eval" value="Observations d'usagers">Observations d'usagers<br>
+        <input type="checkbox" name="Eval" value="Sondages">Sondages<br>
+        <input type="checkbox" name="Eval" value="Tests d'utilisabilité">Tests d'utilisabilité<br>
+        <br>
+        Commentaires:<br>
+	    <textarea rows="5" cols="30"></textarea>
+        <br>
+        <br>
+        <button id="submitButton" type="button" class="block">
+            SOUMETTRE le questionnaire
+        </button>
+        <br>
+        <p id="signature">Site créé par Vergenie Howayek 300008321</p>
+       
+    </div>
+
+    </body>
+
+</html>

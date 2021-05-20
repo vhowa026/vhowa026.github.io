@@ -1,0 +1,60 @@
+/* Style sheet
+   color picker www.w3schools.com/colors/colors_picker.asp
+*/
+
+html {
+    background-color: white;
+  }
+  
+  h1 {
+      font-family: fantasy;
+      font-size: 60px;
+      text-align: center;
+      margin: 0;
+      padding: 20px 0;
+      color: #1a1aff;
+      text-shadow: 3px 3px 1px rgb(175, 174, 174);
+  }
+  
+  img {
+    display: block;
+    margin: 0 auto;
+    align: center;
+  }
+  
+  p {
+    color: white;
+  }
+  
+  table {
+      border: 1px solid rgb(248, 248, 248);
+      background-color: #1a1aff;
+  }
+  
+  /* Defining styling for a specific element type - each question */
+  .question {
+    background-color: #1a1aff;
+    color: white;
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  /* Defining styling for a specific element type - large block buttons */
+  .block {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #66ff99;  /* yellow */
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  /* Defining styling for a specific element with an id */
+  #signature {
+    text-align: right;
+    color: red;
+    font-style: italic;
+    font-size: 75%;
+  }
