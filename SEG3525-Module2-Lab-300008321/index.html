@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+    <title>Farm Boy</title>
+</head>
+<h1>
+    Vergenie's Farm Boy
+</h1>
+<body>
+
+<!-- Tab links, each one with an onclick event associated with it -->
+<div class="tab">
+  <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
+  <button class="tablinks" onclick="openInfo(event, 'Produits')">Produits</button>
+  <button class="tablinks" onclick="openInfo(event, 'Chariot')">Chariot</button>
+</div>
+
+<!-- Tab content -->
+<div id="Client" class="tabcontent">
+  <h3>Parlez-nous un peu de vous.</h3>
+	Choisissez une catégorie:
+    <br>
+    <br>
+	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')" multiple>
+	<option value="Sans Lactose">Sans Lactose</option>
+      <option value="Sans Noix">Sans Noix</option>
+      <option value="Produits Organiques">Produits Organiques</option>
+      <option value="Aucune">Aucune</option>
+	</select>
+</div>
+
+<div id="Produits" class="tabcontent">
+  <h3>Vos produits cibles</h3>
+  <p>Nous avons preselectionné des produits selon vos restrictions.</p>
+	 Choisir des items à acheter:
+	 <div id="displayProduct"></div>
+	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
+		Ajouter les items sélectionnés au chariot.
+	</button>
+</div>
+
+<div id="Chariot" class="tabcontent">
+  <h3>Chariot</h3>
+  <p>Voici votre chariot.</p>
+  <div id="displayCart"></div>
+</div>
+
+<script src="scripts/groceries.js"></script>
+<script src="scripts/main.js"></script>
+
+</body>
+<p id="signature">Site créé par Vergenie Howayek</p>
+</html>
