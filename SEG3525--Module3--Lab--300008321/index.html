@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+<h1>
+    Vergenie's Farm Boy
+</h1>
+
+<body>
+
+<!-- Tab links, each one with an onclick event associated with it -->
+<ul class="breadcrumb">
+    <li><button class="tablinks" onclick="openInfo(event, 'Client')">Client</button></li>
+    <li><button class="tablinks" onclick="openInfo(event, 'Produits')">Produits</button></li>
+    <li><button class="tablinks" onclick="openInfo(event, 'Panier')">Panier</button></li>
+</ul>
+
+<!-- Tab content -->
+<div id="Client" class="tabcontent">
+  <h3>Information sur le client</h3>
+  <p>Parlez-nous un peu de vous.</p>
+	<p>Choisissez une ou plusieurs catégories ci-dessous:</p>
+	<input type="checkbox" id="Sans Lactose" value="Sans Lactose">
+	<label for="Sans Lactose">Sans Lactose</label><br>
+	
+	<input type="checkbox" id="Sans Noix"  value="Sans Noix">
+	<label for="Sans Noix">Sans Noix</label><br>
+	
+	<input type="checkbox" id="Produits Organiques"  value="Produits Organiques">
+	<label for="Produits Organiques">Produits Organiques</label><br>
+	
+	<input type="checkbox" id="Aucune"  value="Aucune">
+	<label for="Aucune">Aucune</label><br>
+	<button id="dietSelect" onclick="populateListProductChoices(this.id, 'displayProduct', 'displayFruitsVeggies')">Voir Produits</button>
+	</form>
+</div>
+
+<div id="Produits" class="tabcontent">
+  <h3>Vos produits cibles</h3>
+  <p>Nous avons preselectionné des produits selon vos restrictions.</p>
+	 <p>Choisir des items à acheter:</p>
+
+     <h3>Fruits et légumes:</h3>
+     <div id="displayFruitsVeggies">
+
+     </div>
+
+     <h3>Autres produits:</h3>
+	 <div id="displayProduct">
+
+     </div>
+	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
+		<p>Ajouter les items sélectionnés au panier.</p>
+	</button>
+</div>
+
+<div id="Panier" class="tabcontent">
+  <h3>Panier</h3>
+  <p>Voici les items dans votre panier.</p>
+  <div id="displayCart"></div>
+</div>
+
+<script src="scripts/groceries.js"></script>
+<script src="scripts/main.js"></script>
+
+</body>
+<p id="signature">Site créé par Vergenie Howayek</p>
+</html>

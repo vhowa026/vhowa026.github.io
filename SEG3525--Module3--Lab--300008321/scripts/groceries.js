@@ -8,39 +8,39 @@ var products = [
 		lactoseFree: false,
 		nutFree: true,
         organic: false,
-        fruit: false,
+        fruitorveggie: false,
 		price: 1.99
 	},
-    {
-        name: "orange (organique)",
-        lactoseFree: true,
-        nutFree: true,
-        organic: true,
-        fruit: true,
-        price: 2.00
-    },
-    {
-        name: "barre de chocolat sans noix",
+	{
+		name: "barre de chocolat sans noix",
         lactoseFree: false,
         nutFree: true,
         organic: false,
-        fruit: false,
+        fruitorveggie: false,
         price: 2.00
-    },
+	},
 	{
 		name: "granola aux amandes",
 		lactoseFree: true,
 		nutFree: false,
         organic: false,
-        fruit: false,
+        fruitorveggie: false,
 		price: 2.35
 	},
+    {
+        name: "celeri (organique)",
+        lactoseFree: true,
+        nutFree: true,
+        organic: true,
+        fruitorveggie: true,
+        price: 2.45
+    },
     {
         name: "beurre d'arachides (organique)",
         lactoseFree: true,
         nutFree: false,
         organic: true,
-        fruit: false,
+        fruitorveggie: false,
         price: 2.50
     },
     {
@@ -48,7 +48,7 @@ var products = [
         lactoseFree: true,
         nutFree: true,
         organic: true,
-        fruit: false,
+        fruitorveggie: false,
         price: 2.50
     },
     {
@@ -56,7 +56,7 @@ var products = [
         lactoseFree: true,
         nutFree: true,
         organic: true,
-        fruit: true,
+        fruitorveggie: true,
         price: 3.00
     },
     {
@@ -64,7 +64,7 @@ var products = [
         lactoseFree: true,
         nutFree: false,
         organic: true,
-        fruit: false,
+        fruitorveggie: false,
         price: 4.50
     },
     {
@@ -72,17 +72,17 @@ var products = [
         lactoseFree: false,
         nutFree: true,
         organic: false,
-        fruit: false,
+        fruitorveggie: false,
         price: 5.00
     },
-	{
-		name: "saumon",
+    {
+        name: "saumon",
 		lactoseFree: true,
 		nutFree: true,
         organic: false,
-        fruit: false,
+        fruitorveggie: false,
 		price: 10.00
-	}
+    }
 ];
 	
 
@@ -94,34 +94,34 @@ function restrictListProducts(prods, restriction) {
 	let product_names = [];
 	for (let i=0; i<prods.length; i+=1) {
 		if ((restriction == "Sans Lactose") && (prods[i].lactoseFree == true)){
-			if(prods[i].fruit == true){
+            if(prods[i].fruitorveggie == true){
                 product_names.push(prods[i].name + ',' + prods[i].price + '$' + ',' + true);
             }
-            else {
+            else{
                 product_names.push(prods[i].name + ',' + prods[i].price + '$' + ',' + false);
             }
 		}
 		else if ((restriction == "Sans Noix") && (prods[i].nutFree == true)){
-			if(prods[i].fruit == true){
+			if(prods[i].fruitorveggie == true){
                 product_names.push(prods[i].name + ',' + prods[i].price + '$' + ',' + true);
             }
-            else {
+            else{
                 product_names.push(prods[i].name + ',' + prods[i].price + '$' + ',' + false);
             }
 		}
-        else if((restriction == "Produits Organiques") && (prods[i].organic == true)){
-            if(prods[i].fruit == true){
+        else if ((restriction == "Produits Organiques") && (prods[i].organic == true)){
+            if(prods[i].fruitorveggie == true){
                 product_names.push(prods[i].name + ',' + prods[i].price + '$' + ',' + true);
             }
-            else {
+            else{
                 product_names.push(prods[i].name + ',' + prods[i].price + '$' + ',' + false);
             }
         }
 		else if (restriction == "Aucune"){
-			if(prods[i].fruit == true){
+			if(prods[i].fruitorveggie == true){
                 product_names.push(prods[i].name + ',' + prods[i].price + '$' + ',' + true);
             }
-            else {
+            else{
                 product_names.push(prods[i].name + ',' + prods[i].price + '$' + ',' + false);
             }
 		}
@@ -132,12 +132,12 @@ function restrictListProducts(prods, restriction) {
 function restrictMutlipleListProducts(prods, restriction) {
     let product_names = [];
 
-    for (let i=0; i<prods.length; i+=1) {
-        //Lactose Free and Nut Free
-        if((restriction[0] == "Sans Lactose") && (restriction[1] == "Sans Noix")){
-            if((restriction[0] == "Sans Lactose") && (prods[i].lactoseFree == true)){
-                if((restriction[1] == "Sans Noix") && (prods[i].nutFree == true)){
-                    if(prods[i].fruit == true){
+    for(let i=0; i<prods.length; i+=1) {
+        //Sans Lactose et Sans Noix
+        if(restriction[0] == "Sans Lactose" && restriction[1] == "Sans Noix") {
+            if((restriction[0] == "Sans Lactose") && (prods[i].lactoseFree == true)) {
+                if((restriction[1] == "Sans Noix") && (prods[i].nutFree == true)) {
+                    if(prods[i].fruitorveggie == true) {
                         product_names.push(prods[i].name + ',' + prods[i].price + '$' + ',' + true);
                     }
                     else {
@@ -146,11 +146,11 @@ function restrictMutlipleListProducts(prods, restriction) {
                 }
             }
         }
-        //Lactose Free and Organic Products
-        else if((restriction[0] == "Sans Lactose") && (restriction[1] == "Produits Organiques")){
-            if((restriction[0] == "Sans Lactose") && (prod[i].lactoseFree == true)){
-                if((restriction[1] == "Produits Organiques") && (prods[i].organic == true)){
-                    if(prods[i].fruit == true){
+        //Sans Lactose et Produits Organiques
+        if(restriction[0] == "Sans Lactose" && restriction[1] == "Produits Organiques") {
+            if((restriction[0] == "Sans Lactose") && (prods[i].lactoseFree == true)) {
+                if((restriction[1] == "Produits Organiques") && (prods[i].organic == true)) {
+                    if(prods[i].fruitorveggie == true) {
                         product_names.push(prods[i].name + ',' + prods[i].price + '$' + ',' + true);
                     }
                     else {
@@ -159,11 +159,11 @@ function restrictMutlipleListProducts(prods, restriction) {
                 }
             }
         }
-        //Nut Free and Organic Products
-        else if((restriction[0] == "Sans Noix") && (restriction[1] == "Produits Organiques")){
-            if((restriction[0] == "Sans Noix") && (prod[i].nutFree == true)){
-                if((restriction[1] == "Produits Organiques") && (prods[i].organic == true)){
-                    if(prods[i].fruit == true){
+        //Sans Noix et Produits Organiques
+        if(restriction[0] == "Sans Noix" && restriction[1] == "Produits Organiques") {
+            if((restriction[0] == "Sans Noix") && (prods[i].nutFree == true)) {
+                if((restriction[1] == "Produits Organiques") && (prods[i].organic == true)) {
+                    if(prods[i].fruitorveggie == true) {
                         product_names.push(prods[i].name + ',' + prods[i].price + '$' + ',' + true);
                     }
                     else {
@@ -172,12 +172,11 @@ function restrictMutlipleListProducts(prods, restriction) {
                 }
             }
         }
-        //Nut Free, Lactose Free and Organic Products
-        if(restriction.length == 3){
-            if((restriction[0] == "Sans Noix") && (prods[i].nutFree == true)){
-                if((restriction[1] == "Sans Lactose") && (prods[i].lactoseFree == true)){
-                    if((restriction[2] == "Produits Organiques") && (prods[i].organic == true)){
-                        if(prods[i].fruit == true){
+        else if(restriction.length == 3) {
+            if ((restriction[0] == "Sans Lactose") && (prods[i].lactoseFree == true)) {
+                if((restriction[1] == "Sans Noix") && (prods[i].nutFree == true)) {
+                    if((restriction[2] == "Produits Organiques") && (prods[i].organic == true)) {
+                        if(prods[i].fruitorveggie == true) {
                             product_names.push(prods[i].name + ',' + prods[i].price + '$' + ',' + true);
                         }
                         else {
@@ -187,8 +186,8 @@ function restrictMutlipleListProducts(prods, restriction) {
                 }
             }
         }
-        else if(restriction == "Aucune"){
-            if(prods[i].fruit == true){
+        else if(restriction == "Aucune") {
+            if(prods[i].fruitorveggie == true) {
                 product_names.push(prods[i].name + ',' + prods[i].price + '$' + ',' + true);
             }
             else {
@@ -198,7 +197,6 @@ function restrictMutlipleListProducts(prods, restriction) {
     }
     return product_names;
 }
-
 // Calculate the total price of items, with received parameter being a list of products
 function getTotalPrice(chosenProducts) {
 	totalPrice = 0;

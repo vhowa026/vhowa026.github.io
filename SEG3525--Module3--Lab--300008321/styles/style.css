@@ -1,0 +1,119 @@
+/* This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp> */
+
+/* Code pour les breadcrumbs pris de https://www.w3schools.com/howto/howto_css_breadcrumbs.asp */
+/* Style the list */
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #eee;
+}
+
+label {
+    font-size: 20px;
+}
+
+/* Afficher les items de la liste un à côté de l'autre */
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+}
+
+/* Ajouter un slash avant et après chaque item dans la liste */
+ul.breadcrumb li+li:before {
+    padding: 10px;
+    color: black;
+    content: "\/";
+}
+
+/* Ajouter des couleurs aux liens dans la liste */
+ul.breadcrumb li a{
+    color: #0275d8;
+    text-decoration: none;
+}
+
+/* Ajouter de la couleur au mouse-hover */
+ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+}
+
+button {
+    background: none!important;
+    border: none;
+    padding: 0!important;
+    font-family: arial, sans-serif;
+    font-size: x-large;
+    font-weight: bolder;
+    color: #308edb;
+    text-decoration: underline;
+    cursor: pointer;
+}
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+  }
+  
+  /* Style the buttons that are used to open the tab content */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: #ccc;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+  }
+
+  #signature {
+    text-align: right;
+    color: #0275d8;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 75%;
+}
+
+  p {
+      font-size: large;
+      font-family: arial, sans-serif;
+  }
+
+  h1 {
+      font-family: arial, sans-serif;
+  }
+  
+  h3 {
+      font-size: x-large;
+      font-family: arial, sans-serif;
+  }
+
+  label {
+      font-size: medium;
+      font-family: arial, sans-serif;
+  }
+
+  body {
+      background-color:palegoldenrod;
+      width: 820px;
+      border: 2px solid #0275d8;
+      padding: 0px 20px 20px 20px;
+  }
