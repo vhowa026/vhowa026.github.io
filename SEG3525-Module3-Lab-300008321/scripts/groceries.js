@@ -135,7 +135,7 @@ function restrictMutlipleListProducts(prods, restriction) {
     for (let i=0; i<prods.length; i+=1) {
         //Lactose Free and Nut Free
         if((restriction[0] == "Sans Lactose") && (restriction[1] == "Sans Noix")){
-            if((restriction[0].value == "Sans Lactose") && (prods[i].lactoseFree == true)){
+            if((restriction[0] == "Sans Lactose") && (prods[i].lactoseFree == true)){
                 if((restriction[1] == "Sans Noix") && (prods[i].nutFree == true)){
                     if(prods[i].fruit == true){
                         product_names.push(prods[i].name + ',' + prods[i].price + '$' + ',' + true);
