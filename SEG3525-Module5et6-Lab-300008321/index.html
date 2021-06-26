@@ -1,0 +1,277 @@
+<!doctype html>
+<!-- Here is a link to the code the documents this code is based on
+https://getbootstrap.com/docs/5.0/getting-started/introduction/
+This will help you get started with your code!
+-->
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="styles/styles.css" rel="stylesheet" type="text/css">
+    <title>Physiotéraphie Vergenie</title>
+</head>
+<body>
+    <!--
+I store all of the page information in a container,
+Many websites will use what is called CSS grid layouts, where you will have a header, body, footer and both sides used for ads or other information
+-->
+<div class = "container-lg" id="page-top">
+
+    <nav class="navbar navbar-expand-lg navbar-warning fixed-top" id="mainNav" style="background:rgba(247, 205, 38, 1); position: sticky">
+        <div class="container">
+            <h1>
+                <a class="navbar-brand js-scroll-trigger" href="#page-top" style="font-weight:bold; font-size:27px; color:black">Physiotéraphie Vergenie</a>
+            </h1> 
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#À propos de nous" style="font-size:17px; color:black">À propos de nous</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Services" style="font-size:17px; color:black">Services</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#Équipe" style="font-size:17px; color:black">Équipe</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#Prenez un rendez-vous" style="font-size:17px; color:black">Prenez un rendez-vous</a>
+                      </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--
+    Most websites now feature what is called a NavBar.
+    The example I give is quite simple with a logo and some text, but you can use it for many navigational patterns
+    https://getbootstrap.com/docs/5.0/components/navbar/
+    -->
+
+    <nav id="À propos de nous" class="navbar bg-info bg-gradient text-black p-3 my-3 "> 
+        <h1 style="font-size: 39.5px; font-weight: bold;"><img src="images/company_logo.png" width="130" height="130"> Bienvenue à la clinique médicale de physiotéraphie Vergenie</h1>
+    </nav>
+    <div class=" p-3 my-3 border bg-warning bg-gradient">
+        <h1 class=""> Qui sommes-nous?</h1>
+        <p style="font-size: 20px; padding-left: 0.1rem">Nous sommes une clinique trouvée en Ottawa, Ontario composée d'un groupe de physiothérapeutes <strong>extrêmement</strong> dédiés au soin et à la santé de nos clients.</p>
+    </div>
+    <br>
+    <!--
+    Tables are one of many ways to organize information easily.
+    It is a good way to list of prices, or services in a business website
+    https://getbootstrap.com/docs/5.0/content/tables/
+    -->
+    <h1  id="Services" class=""><img src="images/services.png" width="130" height="110"> Voici les services offerts par notre clinique:</h1>
+    <br>
+    <table class="table table-info table-hover">
+        <thead>
+            <tr>
+                <th scope="col"><h2>Services</h2></th>
+                <th scope="col"><h2></h2></th>
+                <th scope="col"><h2>Descriptions</h2></th>
+                <th scope="col"><h2>Prix</h2></th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Yoga thérapeutique</strong></td>
+                <td><img src="images/yoga.PNG" width="130" height="130"></td>
+                <!-- Description prise du site web: https://www.iayt.org/page/YogaTherapyDefinitio#:~:text=Yoga%20therapy%20may%20be%20defined,%2C%20psychological%2C%20or%20physiological%20goal.&text=Yoga%20therapy%20respects%20individual%20differences,and%20mental%20and%20physical%20health -->
+                <td>La <strong>thérapie par yoga</strong> peut être définie comme l'application des principes de yoga à une personne en particulier dans le but d'atteindre un objectif spirituel ou psychologique particulier. La thérapie par le yoga respecte les différences individuelles d'âge, de culture, de religion, de philosphie, d'occupation et de santé mentale et physique.</td>
+                <td><strong>100.00$</strong></td>
+            </tr>
+            <tr>
+                <td><strong>Massage thérapeutique</strong></td>
+                <td><img src="images/massage_therapy.png" width="130" height="130"></td>
+                <!-- Description prise du site web: https://www.kenkoumassage.com/blog/massage-detente-therapeutique.html#:~:text=Le%20massage%20th%C3%A9rapeutique%20vise%20donc,une%20douleur%20musculaire%20ou%20articulaire -->
+                <td>Le <strong>massage thérapeutique</strong> vise donc à te soulager d'un problème spécifique. Le massage n'est plus global mais localisé. Ici on ne recherche pas à détendre l'esprit mais à réduire une douleur musculaire ou articulaire.</td>
+                <td><strong>150.00$</strong></td>
+            </tr>
+            <tr>
+                <td><strong>Acupuncture</strong></td>
+                <td><img src="images/acupuncture.png" width="130" height="130"></td>
+                <!-- Description prise du site web: https://www.larousse.fr/dictionnaires/francais/acupuncture/969#:~:text=Branche%20de%20la%20m%C3%A9decine%20chinoise,ou%20provoquer%20un%20effet%20analg%C3%A9sique -->
+                <td>Branche de la médecine chinoise traditionnelle consistant à piquer avec des aiguilles en des points précis de la surface du corps d'un patient pour soigner différentes maladies ou provoquer un effet analgésique.</td>
+                <td><strong>200.00$</strong></td>
+            </tr>
+            <tr>
+                <td><strong>Rééducation pour commotion cérébrale</strong></td>
+                <td><img src="images/concussion.png" width="130" height="130"></td>
+                <!-- Description prise du site web: https://www.cognitivefxusa.com/blog/concussion-rehabilitation -->
+                <td>L'ergothérapie est l'endroit où vous verrez le meilleur mélange d'exercices de thérapie des commotions cérébrales. Nos thérapeutes utilisent souvent une combinaison d'exercices physiques et cognitifs pour cibler des régions spécifiques de votre cerveau pour la <strong>récupération d'une commotion cérébrale</strong>.</td>
+                <td><strong>250.00$</strong></td>
+            </tr>
+            <tr>
+                <td><strong>Genouillères personnalisées</strong></td>
+                <td><img src="images/knee_brace.PNG" width="130" height="130"></td>
+                <!-- Description prise du site web https://aalignment.com/services/knee-bracing#:~:text=A%20custom%20knee%20brace%20is,both%20lightweight%20and%20extremely%20durabl -->
+                <td>Une <strong>genouillère personnalisée</strong> est un appareil médical fabriqué sur la base de mesures précises de votre jambe et adapté à votre blessure spécifique. Le corset est fabriqué à partir d'une combinaison de matériaux composites et de polymères, ou d'aluminium de qualité aérospatiale, ce qui rend à la fois léger et extrêmement durable.</td>
+                <td><strong>400.00$</strong></td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <!-- Cards are quite useful when building a website. They are a useful way to organize information.
+    They can be organized using a CSS grid or other layout options.
+    https://getbootstrap.com/docs/5.0/components/card/
+    -->
+
+    <h1 id="Équipe"><img src="images/experts.png" width="130" height="130"> Rencontrez nos physiothérapeutes!</h1>
+    <br>
+    <div class="row justify-content-around">
+        <div class="card" style="width: 18rem; height: 33rem;">
+            <img src="images/doctor1.jpg" width="264px" height="400px" class=card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text"><strong> <b>Dr. Callie Torres</b></strong>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                <strong>Savoir Plus</strong>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Dr. Torres a gradué en médecine de l'université d'Ottawa et a complété sa résidence en neurologie et son fellowship en <strong>médecine des lésions cérébrales</strong>. Elle est spécialiste en <strong>rééducation pour commotion cérébrale</strong>.</div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem; height: 33rem">
+            <img src="images/doctor3.jpg" width="400px" height="400px" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text"><strong> <b>Dr. Jackson Avery</b> </strong>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                <strong>Savoir Plus</strong>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Dr. Avery est membre de l'Académie canadienne des physiothérapeutes manipulateurs (FCAMPT) qui sont considérés comme des chefs dans le domaine, ayant une formation postdoctorale approfondie en <strong>orthopédie</strong> et en <strong>thérapie manuelle</strong>. Il est spécialiste en <strong>genouillères personnalisées</strong> et <strong>l'acupuncture</strong>.</div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem; height: 33rem">
+            <img src="images/doctor.jpg" width="264px" height="400px" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text"><strong><b>Dr. Meredith Grey</b></strong>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                <strong>Savoir Plus</strong>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Dr. Grey a gradué en médecine de l'université de Toronto et a complété sa résidence et son fellowship en tant que <strong>docteur de sports</strong>. Elle est spécialiste en <strong>massage thérapeutique</strong> et <strong>yoga thérapeutique</strong>.</div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Button trigger modal
+    We use the same button code from above, but now we can trigger a modal to appear.
+    The bootstrap tutorial includes many different types of modals that you can explore
+    https://getbootstrap.com/docs/5.0/components/modal/
+    -->
+    <br>
+    <h1><img src="images/calendar.PNG" width="75" height="70"> Voulez-vous prendre un rendez-vous?</h1>
+    <h3 id="Prenez un rendez-vous">Cliquez sur le bouton ci-dessous:</h3>
+    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Prendre un rendez-vous
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Entrez vos informations ci-dessous</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form name="theform" action="/action_page.php">
+                        <h6 onKeyup="checkform()">Prénom et nom de famille</h6>
+                            <input type="text"><br><br>
+                        <h6>Courriel électronique</h6>
+                            <input type="email" onKeyup="checkform()"><br><br>
+                        <h6>Numéro de téléphone</h6>
+                            <input type="telephone" onKeyup="checkform()"><br><br>
+                        <h6>Choisir le physiotherapeute préféré:</h6>
+                        <form>
+                            <label class="container">Dr. Callie Torres
+                                <input type="radio" id="Dr. Callie Torres" name="pref_physio" value="Dr. Callie Torres">
+                            </label><br>
+                            <label class="container">Dr. Jackson Avery
+                                <input type="radio" id="Dr. Jackson Avery" name="pref_physio" value="Dr. Jackson Avery">
+                            </label><br>
+                            <label class="container">Dr. Meredith Grey
+                                <input type="radio" id="Dr. Meredith Grey" name="pref_physio" value="Dr. Meredith Grey">
+                            </label><br>
+                        </form>
+                        <h6>Choisir un ou plusieurs services:</h6>
+                            <label class="container">Yoga thérapeutique - 100.00$ 
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label><br>
+                            <label class="container">Massage thérapeutique - 150.00$ 
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label><br>
+                            <label class="container">Acupuncture - 200.00$ 
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label><br>
+                            <label class="container">Rééducation pour commotion cérébrale - 250.00$ 
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label><br>
+                            <label class="container">Genouillères personnalisées - 400.00$
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label><br><br>
+                        <h6>Choisir un jour</h6>
+                            <input type="date"><br><br>
+                        <h6>Choisir un temps</h6>
+                            <input type="time" id="appt" name="appt"><br><br>
+                        <p style="text-align:center">Regardez votre courriel ou téléphone pour recevoir la confirmation de votre rendez-vous!</p>
+                      </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                    <button type="button" class="btn btn-warning">Sauvegarder</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--
+    We can also use buttons to expand some hidden options
+    https://getbootstrap.com/docs/5.0/components/collapse/
+    -->
+    <br>
+    <br>
+    <div class=" p-3 my-3 border bg-light bg-gradient" style="height: 30rem; width: 27.5rem">
+        <h4 class="">Adresse</h4>
+        <p class=" p-1 my-3" style="font-size: 15px;">1234 Hello Avenue<br>K1L 0P2<br>Ottawa, Ontario, Canada</p>
+        <h4 class="">Contactez-nous</h4>
+        <p class=" p-1 my-3" style="font-size:15px;"><strong>Courriel électronique: </strong>physiotherapieVergenie@gmail.com<br><strong>Numéro de téléphone: </strong>(613)123-4567</p>
+        <h4 class="">Heures de bureau</h4>
+        <p class=" p-1 my-3" style="font-size: 15px;"><strong>Lundi: </strong>9h00-15h00<br><strong>Mardi: </strong>9h00-15h00<br><strong>Mercredi: </strong>9h00-15h00<br><strong>Jeudi: </strong>9h00-15h00<br><strong>Vendredi: </strong>9h00-15h00<br><strong>Samedi: </strong>10h00-14h00<br><strong>Dimanche: </strong>Fermée<br></p>
+    </div>
+    <br>
+    <!-- This example is using what is called an accordian, this is one of three examples
+    https://getbootstrap.com/docs/5.0/components/accordion/
+    -->
+</div>
+<!-- here we input our javascript helper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>
