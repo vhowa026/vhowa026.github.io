@@ -1,6 +1,8 @@
 import Welcome from './Welcome';
 import About from './About';
-import Services from './Services';
+import ServicesTable from './ServicesTable';
+import Team from './Team';
+import Appointment from './appointment';
 
 const Navbar = () => {
     const navbarStyle={
@@ -46,7 +48,9 @@ const Navbar = () => {
             </nav>
             <Welcome />
             <About />
-            <Services />
+            <ServicesTable />
+            <Team />
+            <Appointment />
         </div>
     );
 }
