@@ -85,6 +85,7 @@ class Information extends React.Component {
     render() {
         return(
             <form onSubmit={this.handleSubmit}>
+                <h2 style={{'color':'rgba(0, 0, 153, 1)'}}>Rentrez vos informations ci-dessous: </h2>
                 <div class="row"> 
                     <label class="column">Premier Nom: </label>
                     <input class="column" id="firstName" value={this.state.firstName} onChange={this.handleChange}/>
@@ -115,7 +116,7 @@ class Information extends React.Component {
                     <input class="column" id="time" value={this.state.time} type="time" onChange={this.handleChange}/>
                     <label class="column" id="timeErrors" name="error"/>
                 </div>
-                <input type="submit" value="Soumettre"/>
+                <input style={{'background':'rgba(26, 117, 255, 1)', 'font-weight':'bold', 'color':'rgba(0, 0, 153, 1)'}} type="submit" value="Soumettre"/>
                 
             </form>
         );

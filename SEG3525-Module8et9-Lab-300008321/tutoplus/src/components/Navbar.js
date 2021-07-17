@@ -4,6 +4,7 @@ import ServicesTable from './ServicesTable';
 import Team from './Team';
 import Tutors from './Tutors';
 import Appointments from './Appointment';
+import Reviews from './Reviews';
 
 const Navbar = () => {
     const navbarStyle={
@@ -53,6 +54,7 @@ const Navbar = () => {
             <Team />
             <Tutors />
             <Appointments />
+            <Reviews />
         </div>
     );
 }
