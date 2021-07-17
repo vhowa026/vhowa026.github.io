@@ -1,3 +1,5 @@
+import Information from "./Information";
+
 const Appointment = () => {
     var classes = [
         {
@@ -262,6 +264,8 @@ const Appointment = () => {
                     </select>
                 </div>
             </div>
+            <br></br>
+            <Information />
         </div>
      );
 }
