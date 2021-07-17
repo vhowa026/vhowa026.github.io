@@ -3,8 +3,8 @@ import One from '../one_on-one.JPG';
 
 const ServicesTable = () => {
     return ( 
-        <div class=" p-3 my-3 border bg-gradient">
-            <h1 id="services" class="" style={{'color':'rgba(0, 0, 153, 1)', 'font-weight':'bold'}}> Voici les services offerts par Tuto+: </h1>
+        <div id="services" class=" p-3 my-3 border bg-gradient">
+            <h1 class="" style={{'color':'rgba(0, 0, 153, 1)', 'font-weight':'bold'}}> Voici les services offerts par Tuto+: </h1>
             <table class="table table-hover" style={{'color':'rgba(0, 0, 153, 1)'}}>
                 <thead>
                     <tr>

@@ -227,17 +227,17 @@ const Appointment = () => {
         }
     }
     return ( 
-        <div class=" p-3 my-3 border bg-gradient" style={{'background':'rgba(204, 224, 255, 1)'}}>
+        <div id="appointment" class=" p-3 my-3 border bg-gradient" style={{'background':'rgba(204, 224, 255, 1)'}}>
             <h1 style={{'color':'rgba(0, 0, 153, 1', 'font-weight':'bold'}}>Prenez un rendez-vous avec nous!</h1>
             <div class="row justify-content-around">
                 <div class="card" style={{'width':'20rem', 'height':'7.9rem', 'color':'rgba(0, 0, 153, 1)'}}>
                     <h2 style={{'color':'rgba(0, 0, 153, 1)', 'text-decoration': 'underline'}}><center>Choisir votre université/collège</center></h2>
                     <select id="schoolSelect" name="schoolSelect" style={{'color':'rgba(0, 0, 153, 1)'}}>
+                        <option value=""></option>
                         <option value="Université d'Ottawa">Université d'Ottawa</option>
                         <option value="Université Carleton">Université Carleton</option>
                         <option value="La Cité Collégiale">La Cité Collégiale</option>
                         <option value="Collège Algonquin">Collège Algonguin</option>
-                        <option value="Aucune">Aucune</option>
                     </select>
                 </div>
                 <div class="card" style={{'width':'20rem', 'height':'7.9rem', 'color':'rgba(0, 0, 153, 1)'}}>

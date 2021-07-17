@@ -4,9 +4,9 @@ import Donna from '../donna.jpg';
 
 const Team = () => {
     return ( 
-        <div class=" p-3 my-3 border bg-gradient" style={{'background':'rgba(204, 224, 255, 1)'}}>
+        <div id="team" class=" p-3 my-3 border bg-gradient" style={{'background':'rgba(204, 224, 255, 1)'}}>
             <br></br>
-            <h1 id="team" style={{'color':'rgba(0, 0, 153, 1)', 'font-weight':'bold'}}> Rencontrez notre équipe fondatrice!</h1>
+            <h1 style={{'color':'rgba(0, 0, 153, 1)', 'font-weight':'bold'}}> Rencontrez notre équipe fondatrice!</h1>
             <br></br>
             <div class="row justify-content-around">
                 <div class="card" style={{'width':'18rem', 'height':'41.5rem', 'color':'rgba(0, 0, 153, 1)'}}>
